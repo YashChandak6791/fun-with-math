@@ -1,7 +1,6 @@
 #https://en.wikipedia.org/wiki/Mersenne_prime - Use for comparison to Mercenne Primes
 #https://www.youtube.com/watch?v=lEvXcTYqtKU - My inspiration for this code
-#https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test - Logic for LLT
-#Since LLT only works for p>2, I originally print the case for p=2
+#https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test - Logic for Lucas Lehmer Primality Test
 #(and assume it falls in the range)
 #Compare to OEIS list A000043: https://oeis.org/A000043
 
@@ -13,7 +12,9 @@ def is_prime(numCalc):
       return False
   return True
 
+#Since LLT only works for p>2, I originally print the case for p=2
 print('2^2-1: Yes')
+
 for powerNum in range(1,5000):
   if (is_prime(powerNum)):
     power = 2**powerNum-1

@@ -1,11 +1,9 @@
 import math
 
-def isPrime(num):
-  a = 2
-  while (a<=math.floor(math.sqrt(num))):
-    if num%a==0 and num > a:
+def is_prime(numCalc):
+  for j in range(2,math.floor(math.sqrt(numCalc)),2):
+    if numCalc%j==0:
       return False
-    a += 1
   return True
 
 def primes():
@@ -16,14 +14,8 @@ def primes():
   else:
     i = 2
     while (i<=maxNum):
-      a = 2
-      isPrimeVar = True
-      while (a<=math.floor(math.sqrt(i))):
-        if i%a==0 and i > a:
-          isPrimeVar = False
-        a += 1
-      if isPrimeVar:
-        print(i)
+      if(is_prime(i)):
+          print(i)
       i += 1
 
 def factors(num):
@@ -38,9 +30,7 @@ def factors(num):
 def AbunDefPerf():
   testNum = int(input('What number do you want to check if Abundant, Deficient, or Perfect: '))
   listL = factors(testNum)
-  sumList = 0
-  for i in listL:
-    sumList += i
+  sumList = sum(listL)
   if (sumList == 2*testNum):
     print(str(testNum) + ' is Perfect!')
   elif (sumList > 2*testNum):

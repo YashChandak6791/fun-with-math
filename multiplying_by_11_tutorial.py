@@ -63,7 +63,7 @@ def practice():
     answerA = input('What is ' + str(listL[6]) + '*11?')
   print('Correct!')
 
-print('Yash Chandak     p2\nMultiplying by 11\n\n')
+print('Yash Chandak\nMultiplying by 11\n\n')
 name = input('Hello! What is your name: ')
 print ('Hello ' + name + '! Today we will learn how to multiply by 11. ')
 multiply11()

@@ -1,5 +1,5 @@
 def is_prime(numCalc):
-  for j in range(2,numCalc-1):
+  for j in range(2,math.floor(math.sqrt(numCalc)),2):
     if numCalc%j==0:
       return False
   return True

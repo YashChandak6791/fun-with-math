@@ -23,14 +23,14 @@ for itemComb in itertools.combinations(arrSquares, 9):
     bool rowEqual = False
     bool colEqual = False
 
-    if (row1 = row2 = row3):
+    if (row1 == row2 == row3):
       print("Row: " + itemPerm)
       rowEqual = True
-    if (col1 = col2 = col3):
+    if (col1 == col2 == col3):
       print("Col: " + itemPerm)
       colEqual = True
 
-    if (colEqual && rowEqual):
+    if (colEqual and rowEqual):
       print("Row and Col: " + itemPerm)
       if (diag1 = diag2 = col1):
         print("Magic square: " + itemPerm)
